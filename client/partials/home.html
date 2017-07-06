@@ -1,0 +1,31 @@
+
+<div class="row home" >
+	<h1 class="col-xs-12 text-center">Header</h1>
+	<ul class="text-center">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Linkedin</a></li>
+		<li><a href="#">Github</a></li>
+		<li><a href="#">Twitter</a></li>
+	</ul>
+	<div class="col-md-4 col-sm-12 left-main">
+		<i></i>
+		<i></i>
+		<i></i>
+	</div>
+	<div class="col-md-8 col-sm-12 right-main">
+
+		<form class="form-group" ng-submit="EC.email(EC.newEmail)">
+			<div>
+				<input class="form-control" type="email" ng-model="EC.newEmail.email" placeholder="Email">
+			</div>	
+			<div>
+				<input class="form-control" type="submit" value="Recieve Emails">
+			</div>		
+		</form>
+	</div>	
+	<div ng-init='EC.index()'>
+		<ul ng-repeat='email in EC.emails'>
+			<li>{{email.email}}</li>
+		</ul>
+	</div>
+</div>

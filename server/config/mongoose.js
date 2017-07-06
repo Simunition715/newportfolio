@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 var models_path = __dirname+'/../models';
-console.log('connecting to Databse');
+console.log('connecting to Database');
 
-mongoose.connect('mongod://localhost/wbportfolio');
 
 mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/wbportfolio');
 
 fs.readdirSync(models_path).forEach(function(file){
 	if(file.indexOf('.js')!=-1){
